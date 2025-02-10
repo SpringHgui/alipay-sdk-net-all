@@ -101,7 +101,7 @@ namespace Aop.Api.Util
         /// <returns>证书链集合</returns>
         private static List<X509Certificate> ReadPemCertChain(string cert)
         {
-            System.Collections.ICollection collection = new X509CertificateParser().ReadCertificates(Encoding.UTF8.GetBytes(cert));
+            var collection = new X509CertificateParser().ReadCertificates(Encoding.UTF8.GetBytes(cert));
             List<X509Certificate> result = new List<X509Certificate>();
             foreach (var each in collection)
             {

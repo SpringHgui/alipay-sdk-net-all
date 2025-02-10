@@ -238,7 +238,7 @@ namespace Aop.Api.Util
                     postData.Append(name);
                     postData.Append("=");
 
-                    string encodedValue = HttpUtility.UrlEncode(value, Encoding.GetEncoding(charset));
+                    string encodedValue = WebUtility.UrlEncode(value);
 
                     postData.Append(encodedValue);
                     hasParam = true;
