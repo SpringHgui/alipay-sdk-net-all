@@ -770,7 +770,7 @@ namespace Aop.Api
             StringBuilder prestr = new StringBuilder();
             foreach (KeyValuePair<string, string> temp in dicArray)
             {
-                prestr.Append(temp.Key + "=" + WebUtility.UrlEncode(temp.Value) + "&");
+                prestr.Append(temp.Key + "=" + HttpUtility.UrlEncode(temp.Value, code) + "&");
             }
 
             //去掉最後一個&字符
